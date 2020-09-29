@@ -27,7 +27,7 @@ $ > tree -d -L 2
     └── package.json
 ```
 
-- ### Setup `client`
+- ### `client`
 
 ```bash
 cd client
@@ -35,7 +35,7 @@ npm i
 npm start
 ```
 
-- ### Setup `server`
+- ### `server`
 
 ```bash
 cd server
