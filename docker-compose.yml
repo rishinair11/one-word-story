@@ -1,19 +1,13 @@
 version: "3"
 services:
   client:
-    image: one-word-story-client:latest
+    image: rishikeshvnair/one-word-story-client:latest
     depends_on:
       - server
     ports:
       - "4001:4001"
-    build:
-      context: ./client
-      dockerfile: Dockerfile
   server:
-    image: one-word-story-server:latest
-    build:
-      context: ./server
-      dockerfile: Dockerfile
+    image: rishikeshvnair/one-word-story-server:latest
     ports:      
       - "4000:4000"
 
