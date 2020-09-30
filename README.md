@@ -43,4 +43,24 @@ npm i
 nodemon app.js
 ```
 
+## For Docker container deployment
+
+In the project root directory, run:
+```bash
+docker-compose up -d
+```
+This will spin up a container each of the `client` (UI) and the `server`.
+
+Public Dockerhub images:
+- [Client](https://hub.docker.com/r/rishikeshvnair/one-word-story-client)
+- [Server](https://hub.docker.com/r/rishikeshvnair/one-word-story-server)
+
+For local Docker image builds, run:
+```bash
+cd client/
+docker build -t one-word-story-client .
+docker run one-word-story-client
+```
+for the `client` and likewise, for `server`.
+
 

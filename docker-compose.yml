@@ -1,0 +1,13 @@
+version: "3"
+services:
+  client:
+    image: one-word-story-client:slim
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+  server:
+    image: one-word-story-server
+    expose:      
+      - "4000"
+

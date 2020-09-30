@@ -1,12 +1,12 @@
 const io = require('socket.io')();
+const PORT = process.env.PORT || 4000;
 
 let story = ""
-
 let clients = []
 
 io.on('connection', client => {
   io.emit('story', story)
-  // console.log(client)
+
   client.on('add_word', (word) => {
     story += ` ${word}`;
     console.log(story)
@@ -56,4 +56,5 @@ io.on('connection', client => {
   })
 });
 
-io.listen(4000);
+console.log('Server started at port:', PORT);
+io.listen(PORT);
